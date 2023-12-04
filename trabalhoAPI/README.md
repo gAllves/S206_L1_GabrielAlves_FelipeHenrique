@@ -1,8 +1,9 @@
 S206 - Qualidade de Software
-Repositório da disciplina Qualidade de Software - S206.
-Instituto Nacional de Telecomunicações - Inatel.
-Curso: Engenharia de Software.
-Prof. Christopher Lima
-Para acompanhar a parte prática desta disciplina, será necessário utilizar algumas ferramentas para quem utiliza o SO Windows:
 
-Instalação do ambiente de desenvolvimento:
+Trabalho de API: Gabriel Alves Fernandes e Felipe Henrique Conrado
+
+Informações relevantes:
+
+Como executar o projeto: 'mvn test -Dtest="NomeDoArquivo" '; no nosso caso 'mvn test -Dtest=TrabalhoRunner'
+
+Como obter o relatório de testes: Após a execução, no diretório target/karate-reports/ , haverá um arquivo aula.inatel.trabalhoAPI.trabalhoAPI.html. Basta executar esse arquivo em um navegador de sua escolha. 
