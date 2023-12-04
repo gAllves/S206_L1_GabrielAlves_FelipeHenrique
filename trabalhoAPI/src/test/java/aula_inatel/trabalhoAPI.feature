@@ -25,5 +25,26 @@ Scenario: Pegando elementos do array de response 'posts' e testando seu tipo
     Then status 200
     And match each $ contains {id: '#number', user_id: '#number', title: '#string', body: '#string'}
 
+Scenario: Testando se o title do terceiro elemento do array 'posts'
+    Given url url_base
+    And path '/posts'
+    When method get
+    Then status 200
+    And match $.[2].title == 'Cognomen centum voluptatum supellex succedo.'
+
+
+Scenario: Testando a criação de um novo elemento sem autorização (Caso negativo)
+    Given url url_base
+    And path '/users'
+    And request request_json1
+    When method post
+    Then status 401
+
+Scenario: Testando retorno do "users" com informações invalidas (Caso negativo)
+    Given url url_base
+    And path '/users/1'
+    When method get
+    Then status 404    
+
 
     
